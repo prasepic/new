@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Payment Gateway</title>
+  <title>Challan Upload</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="generator" content="Webflow">
   <link rel="stylesheet" type="text/css" href="css/normalize.css">
@@ -174,17 +174,11 @@
               </div>
               <div class="nav-menu-titles">Maps</div>
             </a>-->
-            <a class="nav-menu-link w-clearfix w-inline-block" data-load="1" href="news.html">
+            <a class="nav-menu-link w-clearfix w-inline-block" data-load="1" href="social-media.html">
               <div class="icon-list-menu">
                 <div class="icon ion-ios-at-outline"></div>
               </div>
               <div class="nav-menu-titles">My Transactions</div>
-            </a>
-            <a class="nav-menu-link w-clearfix w-inline-block" data-load="1" href="groups.html">
-              <div class="icon-list-menu">
-                <div class="icon ion-ios-at-outline"></div>
-              </div>
-              <div class="nav-menu-titles">Challan Upload</div>
             </a>
             <a class="nav-menu-link w-clearfix w-inline-block" data-load="1" href="contact.html">
               <div class="icon-list-menu">
@@ -210,7 +204,7 @@
             <div class="separator-bottom"></div>
           </nav>
           <div class="wrapper-mask" data-ix="menu-mask"></div>
-          <div class="navbar-title">Payment Gateway</div>
+          <div class="navbar-title">Challan Upload</div>
           <div class="left navbar-button w-nav-button" data-ix="hide-navbar-icons" id="menu-button">
             <div class="home-icon navbar-button-icon">
               <div class="bar-home-icon top"></div>
@@ -220,17 +214,31 @@
           </div>
         </div>
       </div>
-      <div class="body padding">
-        <div class="w-form">
+      <div class="body">
+        <div class="w-tabs" data-duration-in="400" data-duration-out="400" data-easing="ease-out-quint">
+          <div class="top-buttons w-tab-menu">
+            <a class="toolbar-top-button w-inline-block w-tab-link" data-w-tab="Tab 1">
+              <div>New Upload</div>
+            </a>
+            <a class="toolbar-top-button w--current w-inline-block w-tab-link" data-w-tab="Tab 2">
+              <div>History</div>
+            </a>
+          </div>
+          <div class="tabs-content w-tab-content">
+            <div class="tab-pane w-clearfix w-tab-pane" data-w-tab="Tab 1">
+              <div class="group-block2">
+                
+                  
+                  <div class="w-form">
           <form data-name="Email Form" id="email-form" name="email-form" action="#">
             <div class="separator-button-input"></div>
             <div>
-              <label class="label-form" for="full-name-field">FULL NAME</label>
+              <label class="label-form" for="full-name-field">Branch Name</label>
               <input class="input-form w-input" data-name="full-name" id="full-name-field" maxlength="256" name="full-name" required="required" type="text">
               <div class="separator-fields"></div>
             </div>
             <div>
-              <label class="label-form" for="email-field">EMAIL</label>
+              <label class="label-form" for="email-field">IFSC</label>
               <input class="input-form w-input" data-name="email" id="email-field" maxlength="256" name="email" required="required" type="email">
               <div class="separator-fields"></div>
             </div>
@@ -239,18 +247,127 @@
               <div class="separator-fields"></div>
             </div>
             <div>
-              <label class="label-form" for="birthday-field">SUBJECT</label>
+              <label class="label-form" for="acno">ACCOUNT NUMBER</label>
               <input class="input-form w-input" data-name="birthday" id="birthday-field" maxlength="256" name="birthday" required="required" type="text">
               <div class="separator-fields"></div>
             </div>
             <div>
-              <label class="label-form" for="message">Amount</label>
+              <label class="label-form" for="amount">Amount</label>
+              <input class="input-form w-input" data-name="birthday" id="birthday-field" maxlength="256" name="birthday" required="required" type="text">
+              <div class="separator-fields"></div>
+            </div>
+            <div>
+              <label class="label-form" for="image-upload">Upload Image</label>
+              <input class="input-form w-input" type="file" name="pic" accept="image/*" value="Upload">
+              <div class="separator-fields"></div>
+            </div>
+            
+            <div>
+              <label class="label-form" for="message">DESCRIPTION</label>
               <textarea class="input-form textarea w-input" data-name="message" id="message" maxlength="5000" name="message"></textarea>
             </div>
             <div class="separator-button-input"></div>
-            <input class="action-button w-button" data-wait="Please wait..." type="submit" value="Proceed to Payment">
+            <input class="action-button w-button" data-wait="Please wait..." type="submit" value="Upload">
           </form>
 
+        </div>
+                </a>
+              </div>
+              
+              
+              
+              
+              
+            </div>
+            <div class="tab-pane w--tab-active w-tab-pane" data-w-tab="Tab 2">
+              <div class="group-block">
+                <a class="w-inline-block" data-load="1" href="news.html">
+                  <!--<div class="bg4 group-image"></div>-->
+                  <div class="group-title">
+                    <div class="title-text">CHID127508112016</div>
+                  </div>
+                </a>
+                <a class="challanupload" href="#">Challan ID</a><a class="category-link2">GOID110202015</a>
+                <p></p>
+                <a class="challanupload" href="#">Date</a><a class="category-link2">20/10/2015</a>
+                <p></p>
+                <a class="challanupload" href="#">Amount</a><a class="category-link2">1000.00</a>
+                <p></p>
+                <a class="challanupload" href="#">Status</a><a class="category-link3">Cancelled</a>
+              </div>
+              <!--<div class="group-block last">
+                <a class="w-inline-block" data-load="1" href="news.html">
+                  <div class="bg5 group-image"></div>
+                  <div class="group-title">
+                    <div class="title-text">Travel</div>
+                  </div>
+                </a>
+              </div>-->
+              <div class="group-block">
+                <a class="w-inline-block" data-load="1" href="news.html">
+                  
+                  <div class="group-title">
+                    <div class="title-text">CHID127508112016</div>
+                  </div>
+                </a>
+                <a class="challanupload" href="#">Challan ID</a><a class="category-link2">GOID110202015</a>
+                <p></p>
+                <a class="challanupload" href="#">Date</a><a class="category-link2">20/10/2015</a>
+                <p></p>
+                <a class="challanupload" href="#">Amount</a><a class="category-link2">1000.00</a>
+                <p></p>
+                <a class="challanupload" href="#">Status</a><a class="category-link3">Cancelled</a>
+              </div>
+              
+              
+              <div class="group-block last">
+                <a class="w-inline-block" data-load="1" href="news.html">
+                    <div class="group-title">
+                    <div class="title-text">CHID127508112016</div>
+                  </div>
+                </a>
+                <a class="challanupload" href="#">Challan ID</a><a class="category-link2">GOID110202015</a>
+                <p></p>
+                <a class="challanupload" href="#">Date</a><a class="category-link2">20/10/2015</a>
+                <p></p>
+                <a class="challanupload" href="#">Amount</a><a class="category-link2">1000.00</a>
+                <p></p>
+                <a class="challanupload" href="#">Status</a><a class="category-link3">Cancelled</a>
+              </div>
+              
+              <div class="group-block">
+                <a class="w-inline-block" data-load="1" href="news.html">
+                  
+                  <div class="group-title">
+                    <div class="title-text">CHID127508112016</div>
+                  </div>
+                </a>
+                <a class="challanupload" href="#">Challan ID</a><a class="category-link2">GOID110202015</a>
+                <p></p>
+                <a class="challanupload" href="#">Date</a><a class="category-link2">20/10/2015</a>
+                <p></p>
+                <a class="challanupload" href="#">Amount</a><a class="category-link2">1000.00</a>
+                <p></p>
+                <a class="challanupload" href="#">Status</a><a class="category-link3">Cancelled</a>
+              </div>
+              
+              
+              <div class="group-block last">
+                <a class="w-inline-block" data-load="1" href="news.html">
+                   <div class="group-title">
+                    <div class="title-text">CHID127508112016</div>
+                  </div>
+                </a>
+                <a class="challanupload" href="#">Challan ID</a><a class="category-link2">GOID110202015</a>
+                <p></p>
+                <a class="challanupload" href="#">Date</a><a class="category-link2">20/10/2015</a>
+                <p></p>
+                <a class="challanupload" href="#">Amount</a><a class="category-link2">1000.00</a>
+                <p></p>
+                <a class="challanupload" href="#">Status</a><a class="category-link3">Cancelled</a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

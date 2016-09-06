@@ -879,10 +879,24 @@ a {
 }
 
 .group-block {
-  width: 50%;
+  width: 100%;
   padding-top: 10px;
   padding-right: 4px;
   float: left;
+  background:#FFF;
+  margin: 15px 0 30px 0px;
+  padding-bottom: 20px;
+}
+
+.group-block2 {
+  width: 100%;
+  padding-top: 10px;
+  padding-right: 4px;
+  padding-left:10px;
+  float: left;
+  background:#FFF;
+  margin: 15px 0 30px 0px;
+  padding-bottom: 20px;
 }
 
 .group-block.last {
@@ -956,7 +970,7 @@ a {
 .image-new {
   position: relative;
   height: 200px;
-  background-image: url('../images/photo-1437422061949-f6efbde0a471.jpe');
+  background-image: url('../images/photo-1437422061949-f6efbde0a471.jpg');
   background-position: 50% 0px;
   background-size: cover;
   background-repeat: no-repeat;
@@ -1049,6 +1063,28 @@ margin-bottom: 7px;
   margin-top: 0px;
 }
 
+.challanupload{
+display:inline-block;
+width:auto;
+height:25px;
+padding-right:10px;
+padding-left:10px;
+border:thin solid;
+border-color:#b2b2b2;
+border-radius:4px;
+color:#6f6f6f;
+line-height:21px;
+text-decoration:none;
+margin: 10px 10px 5px 31px;
+}
+
+
+
+
+
+
+
+
 .category-link {
   display: inline-block;
   width: auto;
@@ -1064,6 +1100,63 @@ margin-bottom: 7px;
   line-height: 21px;
   text-decoration: none;
 }
+
+
+
+
+.category-link1{
+display:inline-block;
+width:auto;
+height:25px;
+margin-top:10px;
+margin-right:10px;
+padding-right:10px;
+padding-left:10px;
+border:thin solid;
+border-color:#b2b2b2;
+border-radius:4px;
+color:#6f6f6f;
+line-height:21px;
+text-decoration:none;
+}
+
+.category-link2{
+display:inline-block;
+width:auto;
+height:25px;
+margin-top:10px;
+margin-right:10px;
+padding-right:10px;
+padding-left:10px;
+border:thin solid;
+border-color:#ffcf26;
+border-radius:4px;
+color:#6f6f6f;
+line-height:21px;
+text-decoration:none;
+}
+.category-link2:hover{
+background:#c79625;
+color:#fff;
+}
+.category-link3{
+display:inline-block;
+width:auto;
+height:25px;
+margin-top:10px;
+margin-right:10px;
+padding-right:10px;
+padding-left:10px;
+border:thin solid;
+border-color:#68ab71;
+border-radius:4px;
+color:#6f6f6f;
+line-height:21px;
+text-decoration:none;
+}
+.category-link3:hover{
+background:#68ab71;
+color:#FFF;}
 
 .news-mask {
   position: fixed;
