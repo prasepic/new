@@ -1040,6 +1040,20 @@ margin-bottom: 7px;
 
 }
 
+.detail-button2{
+
+color:#b2b2b2;
+font-size:11px;
+font-weight:bold;
+margin-bottom: 7px;
+    margin-right: 7px;
+    padding-left: 12px;
+    padding-right: 12px;
+	border:thin solid #b2b2b2;
+}
+
+
+
 .description-new.larger {
   font-size: 13px;
 }
@@ -1242,7 +1256,7 @@ color:#FFF;}
 }
 
 .small-button.icon-only.social-squared.dribbble {
-  background-color: #ea4c89;
+  background-color: #F58F44;
 }
 
 .small-button.icon-only.social-squared.mail {
@@ -1284,6 +1298,10 @@ color:#FFF;}
 .small-button.social.twitter {
   background-color: #A1D645;
 }
+
+.small-button.social.dribbble{
+	background-color:#F58F44;
+	}
 
 .icon-button {
   display: inline-block;
