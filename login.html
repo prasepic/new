@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
   <meta charset="utf-8">
@@ -29,21 +29,23 @@
         <div class="logo-login"></div>
         <div class="bottom-section padding">
           <div class="w-form">
-            <form data-name="Email Form" data-redirect="home.html" id="submit-form" name="email-form" action="#">
+            <form data-name="Email Form"  id="submit-form" name="email-form" action="#" method="post">
               <div>
                 <input class="input-form light w-input" data-name="email" id="email-field" maxlength="256" name="email" placeholder="Username" required="required" type="email">
                 <div class="separator-fields"></div>
               </div>
               <div>
                 <div class="block-input-combined">
-                  <input class="input-form left light w-input" data-name="password" id="password-field" maxlength="256" name="password" placeholder="Password" required="required" type="password"><a class="right-input-link" data-load="1" href="forgot.html">Forgot it?</a>
+                  <input class="input-form left light w-input" data-name="password" id="password-field" maxlength="256" name="password" placeholder="Password" required="required" type="password">
+                    <a class="right-input-link" data-load="1" href="forgot.html">Forgot it?</a>
                 </div>
                 <div class="separator-button-input"></div>
               </div>
-              <input class="action-button w-button" data-wait="Please wait..." type="submit" value="Sign In">
+              <input class="action-button w-button" data-wait="Please wait..." type="button" value="Sign In"  id="login">
               <div class="separator-button"></div><a class="link-upper" data-load="1" href="signup.html">Don't have an account? <strong class="b-link">Sign Up</strong></a>
             </form>
           </div>
+            <div id="res"></div>
         </div>
       </div>
     </div>
@@ -53,9 +55,40 @@
       </div>
     </div>
   </section>
-  <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script src="jquery-1.11.3.min.js"></script>
   <script type="text/javascript" src="js/framework.js"></script>
   <script type="text/javascript" src="js/scripts.js"></script>
+    <script>
+
+$(document).ready(function(e) {
+$('#login').click(function()
+{
+	var pass=$("#password-field").val();
+	$.ajax({
+	type:"POST",
+	url:"http://prasetech.in/student/loginval.php",
+	data: { password: pass, username: $("#email-field").val() },
+	success:function(data){
+		if(data=="success"){
+		    window.location.href = "home.html";
+			}
+	  else
+	  {
+		  $("#res").html(data);
+	  }
+
+	  elseif
+	  {
+		  $("#res").html(data);
+		  }
+	}
+});
+});
+});
+
+    </script>
+    
+
   <!--[if lte IE 9]><script src="js/placeholders.min.js"></script><![endif]-->
 </body>
 </html>

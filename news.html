@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
   <meta charset="utf-8">
@@ -21,6 +21,28 @@
   <link rel="apple-touch-icon" href="images/favico.ico">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <link href="css/ionicons.min.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+    <script type="text/javascript">
+   $(document).ready(function()
+   {
+       var url = "http://prasetech.in/student/transactionjson.php";
+       var inc = 0;
+   $.getJSON(url,function(result){
+   console.log(result);
+   $.each(result, function(i, field){
+   var id=field.Pay_No;
+   var title=field.Pay_Status;
+   var duration=field.Item_Id;
+   var price=field.UserId;
+   var amount2 = field.Act_Amount;
+   var date = field.Pay_Date.date;
+    inc ++;
+
+   $("#transview").append("<div class='text-new'><h2 class='title-new'>Transaction History- "+ inc +"</h2><p class='description-new'>Access all news easily and instantaneously </p><a class='category-link1' href='#'>Transaction ID</a><a class='category-link2'>"+ id +"</a><p></p><a class='category-link1' href='#'>Date</a><a class='category-link2'>"+ date +"</a><p></p><a class='category-link1' href='#'>Created By</a><a class='category-link2'>admin</a><p></p><a class='category-link3' href='#'>Amount</a><a class='category-link3'>"+ amount2 +"</a></div>");
+   });
+   });
+   });
+    </script>
 </head>
 <body>
   <section class="mobile-wrapper w-section">
@@ -61,29 +83,11 @@
           <li class="list-item-new">
             <a class="link-blog-list w-inline-block" data-load="1" href="blog-post.html">
               <div class="image-new"></div>
-              <div class="text-new">
-                <h2 class="title-new">Transaction History -1</h2>
-                <p class="description-new">Access all news easily and instantaneously </p>
-                <a class="category-link1" href="#">Transaction ID</a><a class="category-link2">GOID110202015</a>
-                <p></p>
-                <a class="category-link1" href="#">Date</a><a class="category-link2">20/10/2015</a>
-                <p></p>
-                <a class="category-link1" href="#">Created By</a><a class="category-link2">admin</a>
-                <p></p>
-                <a class="category-link3" href="#">Item Name</a><a class="category-link3">AQUARIUM 003</a>
-              </div>
               
-              <div class="text-new">
-                <h2 class="title-new">Transaction History -2</h2>
-                <p class="description-new">Access all news easily and instantaneously </p>
-                <a class="category-link1" href="#">Transaction ID</a><a class="category-link2">GOID110202015</a>
-                <p></p>
-                <a class="category-link1" href="#">Date</a><a class="category-link2">20/10/2015</a>
-                <p></p>
-                <a class="category-link1" href="#">Created By</a><a class="category-link2">admin</a>
-                <p></p>
-                <a class="category-link3" href="#">Item Name</a><a class="category-link3">AQUARIUM 003</a>
-              </div>
+              
+                <div id=transview>
+
+                </div>
               
             </a>
           </li>

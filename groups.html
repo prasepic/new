@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
   <meta charset="utf-8">
@@ -21,6 +21,27 @@
   <link rel="apple-touch-icon" href="images/favico.ico">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <link href="css/ionicons.min.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+    <script type="text/javascript">
+   $(document).ready(function()
+   {
+       var url = "http://prasetech.in/student/challanjson.php";
+       var inc = 0;
+   $.getJSON(url,function(result){
+   console.log(result);
+   $.each(result, function(i, field){
+   var id=field.Chln_Id;
+   var status = field.Chln_Status;
+   var challannum=field.Chln_No;
+   var amount2 = field.Amount;
+   var date = field.Chln_Date.date;
+   inc ++;
+
+   $("#challanview").append("<div class='group-block'><a class='w-inline-block' data-load='1' href='news.html'><!--<div class='bg4 group-image'></div>--><div class='group-title'><div class='title-text'>CHID127508112016</div></div></a><a class='challanupload' href='#'>Challan ID</a><a class='category-link2'>"+ challannum +"</a><p></p><a class='challanupload' href='#'>Date</a><a class='category-link2'>"+ date +"</a><p></p><a class='challanupload' href='#'>Amount</a><a class='category-link2'>"+ amount2 +"</a><p></p><a class='challanupload' href='#'>Status</a><a class='category-link3'>"+ status +"</a></div>");
+   });
+   });
+   });
+    </script>
 </head>
 <body>
   <section class="mobile-wrapper w-section">
@@ -174,7 +195,7 @@
               </div>
               <div class="nav-menu-titles">Maps</div>
             </a>-->
-            <a class="nav-menu-link w-clearfix w-inline-block" data-load="1" href="social-media.html">
+            <a class="nav-menu-link w-clearfix w-inline-block" data-load="1" href="news.html">
               <div class="icon-list-menu">
                 <div class="icon ion-ios-at-outline"></div>
               </div>
@@ -198,6 +219,12 @@
                 <div class="icon ion-ios-bookmarks-outline"></div>
               </div>
               <div class="nav-menu-titles">Terms and Conditions</div>
+            </a>
+            <a class="last nav-menu-link w-clearfix w-inline-block" data-load="1" href="logout.html">
+              <div class="icon-list-menu">
+                <div class="icon ion-ios-bookmarks-outline"></div>
+              </div>
+              <div class="nav-menu-titles">Logout</div>
             </a>
             <div class="separator-bottom"></div>
             <div class="separator-bottom"></div>
@@ -280,21 +307,7 @@
               
             </div>
             <div class="tab-pane w--tab-active w-tab-pane" data-w-tab="Tab 2">
-              <div class="group-block">
-                <a class="w-inline-block" data-load="1" href="news.html">
-                  <!--<div class="bg4 group-image"></div>-->
-                  <div class="group-title">
-                    <div class="title-text">CHID127508112016</div>
-                  </div>
-                </a>
-                <a class="challanupload" href="#">Challan ID</a><a class="category-link2">GOID110202015</a>
-                <p></p>
-                <a class="challanupload" href="#">Date</a><a class="category-link2">20/10/2015</a>
-                <p></p>
-                <a class="challanupload" href="#">Amount</a><a class="category-link2">1000.00</a>
-                <p></p>
-                <a class="challanupload" href="#">Status</a><a class="category-link3">Cancelled</a>
-              </div>
+              
               <!--<div class="group-block last">
                 <a class="w-inline-block" data-load="1" href="news.html">
                   <div class="bg5 group-image"></div>
@@ -303,69 +316,13 @@
                   </div>
                 </a>
               </div>-->
-              <div class="group-block">
-                <a class="w-inline-block" data-load="1" href="news.html">
-                  
-                  <div class="group-title">
-                    <div class="title-text">CHID127508112016</div>
-                  </div>
-                </a>
-                <a class="challanupload" href="#">Challan ID</a><a class="category-link2">GOID110202015</a>
-                <p></p>
-                <a class="challanupload" href="#">Date</a><a class="category-link2">20/10/2015</a>
-                <p></p>
-                <a class="challanupload" href="#">Amount</a><a class="category-link2">1000.00</a>
-                <p></p>
-                <a class="challanupload" href="#">Status</a><a class="category-link3">Cancelled</a>
-              </div>
+             <div id=challanview></div>
+              
+             
               
               
-              <div class="group-block last">
-                <a class="w-inline-block" data-load="1" href="news.html">
-                    <div class="group-title">
-                    <div class="title-text">CHID127508112016</div>
-                  </div>
-                </a>
-                <a class="challanupload" href="#">Challan ID</a><a class="category-link2">GOID110202015</a>
-                <p></p>
-                <a class="challanupload" href="#">Date</a><a class="category-link2">20/10/2015</a>
-                <p></p>
-                <a class="challanupload" href="#">Amount</a><a class="category-link2">1000.00</a>
-                <p></p>
-                <a class="challanupload" href="#">Status</a><a class="category-link3">Cancelled</a>
-              </div>
               
-              <div class="group-block">
-                <a class="w-inline-block" data-load="1" href="news.html">
-                  
-                  <div class="group-title">
-                    <div class="title-text">CHID127508112016</div>
-                  </div>
-                </a>
-                <a class="challanupload" href="#">Challan ID</a><a class="category-link2">GOID110202015</a>
-                <p></p>
-                <a class="challanupload" href="#">Date</a><a class="category-link2">20/10/2015</a>
-                <p></p>
-                <a class="challanupload" href="#">Amount</a><a class="category-link2">1000.00</a>
-                <p></p>
-                <a class="challanupload" href="#">Status</a><a class="category-link3">Cancelled</a>
-              </div>
-              
-              
-              <div class="group-block last">
-                <a class="w-inline-block" data-load="1" href="news.html">
-                   <div class="group-title">
-                    <div class="title-text">CHID127508112016</div>
-                  </div>
-                </a>
-                <a class="challanupload" href="#">Challan ID</a><a class="category-link2">GOID110202015</a>
-                <p></p>
-                <a class="challanupload" href="#">Date</a><a class="category-link2">20/10/2015</a>
-                <p></p>
-                <a class="challanupload" href="#">Amount</a><a class="category-link2">1000.00</a>
-                <p></p>
-                <a class="challanupload" href="#">Status</a><a class="category-link3">Cancelled</a>
-              </div>
+             
             </div>
           </div>
         </div>
