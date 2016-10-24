@@ -25,7 +25,7 @@
     <script type="text/javascript">
    $(document).ready(function()
    {
-       var url = "http://prasetech.in/student/messagejson.php";
+       var url = "http://localhost/student2/messagejson.php";
        var inc = 0;
    $.getJSON(url,function(result){
    console.log(result);
@@ -34,10 +34,12 @@
    var status=field.Msg_status;
    var message=field.Msg;
    var reply=field.Reply_Msg;
-   
+   var day=field.date;
+   var time=field.time;
+
     inc ++;
 
-   $("#transview").append("<div class='chat column-right w-clearfix'><div class='arrow-globe'></div><div class='chat-text'>"+ reply +"</div><div class='chat-time'>3 mins ago</div></div><div class='chat column-right right w-clearfix'><div class='arrow-globe right'></div><div class='chat-text right'>"+ message +"</div><div class='chat-time right'>3 min ago</div></div>");
+   $("#transview").append("<div class='chat column-right w-clearfix'><div class='arrow-globe'></div><div class='chat-text'>"+ reply +"</div><div class='chat-time'>"+ time +"</div></div><div class='chat column-right right w-clearfix'><div class='arrow-globe right'></div><div class='chat-text right'>"+ message +"</div><div class='chat-time right'>3 min ago</div></div>");
    });
    });
    });
@@ -62,7 +64,7 @@
         <ul class="list list-chats">
           <li class="list-chat w-clearfix" data-ix="list-item">
             <div class="chat column-left">
-              
+
             </div>
             <div class="chat column-right w-clearfix">
               <div class="arrow-globe"></div>
@@ -77,17 +79,17 @@
             </div>
             <div id=transview></div>
           </li>
-          
-          
 
-          
+
+
+
         </ul>
       </div>
       <div class="input-chat-block">
         <div class="w-form">
           <form class="w-clearfix" data-name="Send" id="wf-form-Send" name="wf-form-Send" action="#">
             <input class="input-chat w-input" data-name="Email" id="chat-message" maxlength="256" name="email" placeholder="Your message" required type="text">
-            <input class="chat-button w-button" data-wait="Please wait..." type="submit" value="Send">
+            <input class="chat-button w-button" data-wait="Please wait..." type="submit" value="Send" id="send">
           </form>
 
         </div>
@@ -99,9 +101,38 @@
       </div>
     </div>
   </section>
-  <script type="text/javascript" src="js/jquery.min.js"></script>
+  <script src="jquery-1.11.3.min.js"></script>
   <script type="text/javascript" src="js/framework.js"></script>
   <script type="text/javascript" src="js/scripts.js"></script>
+  <script>
+
+$(document).ready(function(e) {
+$('#send').click(function()
+{
+  var messagenew=$("#chat-message").val();
+  $.ajax({
+  type:"POST",
+  url:"http://localhost/student/chatinsert.php",
+  data: { message: messagenew },
+  success:function(data){
+    if(data=="success"){
+        window.location.href = "chat.html";
+      }
+    else
+    {
+      $("#res").html(data);
+    }
+
+    elseif
+    {
+      $("#res").html(data);
+      }
+  }
+});
+});
+});
+
+    </script>
   <!--[if lte IE 9]><script src="js/placeholders.min.js"></script><![endif]-->
 </body>
 </html>
