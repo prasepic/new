@@ -57,7 +57,7 @@ $('#logout').click(function()
   
   $.ajax({
   type:"POST",
-  url:"logout.php",
+  url:"http://prasetech.in/student/logout.php",
   success:function(data){
     if(data=="success"){
         window.location.href = "login.html";
